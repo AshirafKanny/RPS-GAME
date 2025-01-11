@@ -1,0 +1,92 @@
+.container {
+    width: 70vw;
+    height: 70vh;
+    background-color: rgba(174, 184, 184, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Optional: if you want the elements to be stacked vertically */
+}
+
+.players {
+    display: flex;
+    gap: 30px;
+    margin-left: 0; /* Center the players within the container */
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh; /* Ensure body takes full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+.player {
+    width: 80px;
+    height: 30px;
+    border: 3px solid brown;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 15%;
+}
+
+.computer {
+    width: 100px;
+    height: 30px;
+    border: 3px solid brown;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 15%;
+}
+
+.sign {
+    width: 50px;
+    height: 50px;
+    border: 3px solid brown;
+    background-color: snow;
+    border-radius: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.signs {
+    display: flex;
+    gap: 30px;
+}
+
+.sign > img {
+    width: 30px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 15px;
+    color: brown;
+    margin-top: 20px;
+}
+
+.play-again {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: snow;
+    padding: 5px;
+    margin-left: 120px;
+    margin-top: 60px;
+}
+
+.choose {
+    color: brown;
+    margin-left: 90px;
+}
+
+.results {
+    margin-left: 100px;
+    color: brown;
+}

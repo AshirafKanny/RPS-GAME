@@ -90,3 +90,16 @@ body {
     margin-left: 100px;
     color: brown;
 }
+
+.chozen, .computer-choice{
+    text-align: center;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.human-and-computer-choices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

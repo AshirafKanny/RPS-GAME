@@ -4,8 +4,9 @@ let scissors = document.getElementById('scissors');
 let chozen = document.getElementById('chozen');
 let computerChoice = document.getElementById('computer-choice')
 
+let humanChoice;
 rock.addEventListener('click', () =>{
-    let humanChoice = 'rock'
+    humanChoice = 'rock'
     chozen.textContent = `You chose ${humanChoice}`;
     computerChoice.textContent = computerPlay()
 }) 

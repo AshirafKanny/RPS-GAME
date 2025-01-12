@@ -103,3 +103,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.signs,.play-again:hover{
+    cursor: pointer;
+}

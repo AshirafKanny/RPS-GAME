@@ -7,4 +7,14 @@ let computerChoice = document.getElementById('computer-choice')
 rock.addEventListener('click', () =>{
     chozen.textContent = 'You choze Rock';
     computerChoice.textContent = 'computer choice'
+}) 
+
+paper.addEventListener('click', () => {
+    chozen.textContent = 'You choose Paper';
+    computerChoice.textContent = 'computer choice'
+})
+
+scissors.addEventListener('click',()=>{
+    chozen.textContent = 'You choose Scissors'
+    computerChoice.textContent = 'computer choice'
 })

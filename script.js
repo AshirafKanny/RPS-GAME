@@ -6,7 +6,7 @@ let computerChoice = document.getElementById('computer-choice')
 
 rock.addEventListener('click', () =>{
     let humanChoice = 'rock'
-    chozen.textContent = 'You choze Rock';
+    chozen.textContent = `You chose ${humanChoice}`;
     computerChoice.textContent = computerPlay()
 }) 
 

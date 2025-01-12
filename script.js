@@ -8,6 +8,9 @@ let outcome = document.getElementById('outcome')
 let humanScore = document.getElementById('human-score')
 let computerScore = document.getElementById('computer-score')
 
+let reset = document.getElementById('reset')
+
+
 let humanChoice;
 let choiceComputer
 
@@ -76,4 +79,19 @@ function compare(humanChoice, computerChoice, humanScore, computerScore){
         return 'Draw'
      
     }
+}
+
+
+reset.addEventListener('click', () =>{
+    resetGame()
+
+})
+
+
+function resetGame(){
+    humanScore.textContent = 0;
+    computerScore.textContent = 0;
+    chozen.textContent = '';
+    computerChoice.textContent = '';
+    outcome.textContent = '';
 }

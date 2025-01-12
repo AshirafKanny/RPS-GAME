@@ -12,12 +12,14 @@ rock.addEventListener('click', () =>{
 }) 
 
 paper.addEventListener('click', () => {
-    chozen.textContent = 'You choose Paper';
+    humanChoice = 'paper'
+    chozen.textContent = `You Choze ${humanChoice}`;
     computerChoice.textContent = computerPlay()
 })
 
 scissors.addEventListener('click',()=>{
-    chozen.textContent = 'You choose Scissors'
+    humanChoice = 'scissors'
+    chozen.textContent = `You Choze ${humanChoice}`;
     computerChoice.textContent = computerPlay()
 })
 

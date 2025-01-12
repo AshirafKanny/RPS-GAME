@@ -5,6 +5,9 @@ let chozen = document.getElementById('chozen');
 let computerChoice = document.getElementById('computer-choice')
 let outcome = document.getElementById('outcome')
 
+let humanScore = document.getElementById('human-score')
+let computerScore = document.getElementById('computer-score')
+
 let humanChoice;
 let choiceComputer
 
@@ -12,21 +15,21 @@ rock.addEventListener('click', () =>{
     humanChoice = 'rock'
     chozen.textContent = `You chose ${humanChoice}`;
     computerChoice.textContent = computerPlay()
-    outcome.textContent = compare(humanChoice, computerChoice)
+    outcome.textContent = compare(humanChoice, choiceComputer, humanScore, computerScore)
 }) 
 
 paper.addEventListener('click', () => {
     humanChoice = 'paper'
-    chozen.textContent = `You Choze ${humanChoice}`;
+    chozen.textContent = `You chose ${humanChoice}`;
     computerChoice.textContent = computerPlay()
-    outcome.textContent = compare(humanChoice, computerChoice)
+    outcome.textContent = compare(humanChoice, choiceComputer, humanScore, computerScore)
 })
 
 scissors.addEventListener('click',()=>{
     humanChoice = 'scissors'
-    chozen.textContent = `You Choze ${humanChoice}`;
+    chozen.textContent = `You chose ${humanChoice}`;
     computerChoice.textContent = computerPlay()
-    outcome.textContent = compare(humanChoice, computerChoice)
+    outcome.textContent = compare(humanChoice, choiceComputer, humanScore, computerScore)
 })
 
 
@@ -35,40 +38,41 @@ scissors.addEventListener('click',()=>{
 function computerPlay(){
     let choices = ['rock', 'paper', 'scissors'];
     let random = Math.floor(Math.random() * 3);
-    computerChoice = choices[random]
-    return `Computer choze ${computerChoice}`
+    choiceComputer = choices[random]
+    return `Computer chose ${choiceComputer}`
 }
 
-function compare(humanChoice, computerChoice){
+function compare(humanChoice, computerChoice, humanScore, computerScore){
     if(humanChoice === 'rock' && computerChoice === 'scissors'){
-           console.log('You win');
+          humanScore.textContent = parseInt(humanScore.textContent) + 1     
         return 'You win'
+
      
         
-    }else if(humanChoice === 'rock' && computerChoice === 'paper'){
-         console.log('You lose');
+    }else if(humanChoice === 'rock' && computerChoice === 'paper'){   
+        computerScore.textContent = parseInt(computerScore.textContent) + 1
         return 'You lose'
+
        
     }else if(humanChoice === 'paper' && computerChoice === 'rock'){
-           console.log('You win');
+        humanScore.textContent = parseInt(humanScore.textContent) + 1
         return 'You win'
      
         
 
     }else if(humanChoice === 'paper' && computerChoice === 'scissors'){
-         console.log('You lose');
+        computerScore.textContent = parseInt(computerScore.textContent) + 1
         return 'You lose'
        
     }else if(humanChoice === 'scissors' && computerChoice === 'paper'){
-           console.log('You win');
+        humanScore.textContent = parseInt(humanScore.textContent) + 1
         return 'You win'
      
     }else if(humanChoice === 'scissors' && computerChoice === 'rock'){
-          console.log('You lose');
+        computerScore.textContent = parseInt(computerScore.textContent) + 1
         return 'You lose'
       
     }else if(humanChoice === computerChoice){
-           console.log('Draw');
         return 'Draw'
      
     }

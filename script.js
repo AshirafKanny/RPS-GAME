@@ -47,7 +47,8 @@ function computerPlay(){
 
 function compare(humanChoice, computerChoice, humanScore, computerScore){
     if(humanChoice === 'rock' && computerChoice === 'scissors'){
-          humanScore.textContent = parseInt(humanScore.textContent) + 1     
+          humanScore.textContent = parseInt(humanScore.textContent) + 1  
+           triggerWinConfetti();   
         return 'You win'
 
      
@@ -59,6 +60,7 @@ function compare(humanChoice, computerChoice, humanScore, computerScore){
        
     }else if(humanChoice === 'paper' && computerChoice === 'rock'){
         humanScore.textContent = parseInt(humanScore.textContent) + 1
+         triggerWinConfetti();
         return 'You win'
      
         
@@ -69,6 +71,7 @@ function compare(humanChoice, computerChoice, humanScore, computerScore){
        
     }else if(humanChoice === 'scissors' && computerChoice === 'paper'){
         humanScore.textContent = parseInt(humanScore.textContent) + 1
+         triggerWinConfetti();
         return 'You win'
      
     }else if(humanChoice === 'scissors' && computerChoice === 'rock'){
@@ -94,4 +97,17 @@ function resetGame(){
     chozen.textContent = '';
     computerChoice.textContent = '';
     outcome.textContent = '';
+}
+
+function triggerWinConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 490,
+        origin: { y: 0.3 },
+        colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00'],
+        startVelocity: 30,
+        gravity: 0.5,
+        shapes: ['square', 'circle'],
+        ticks: 200
+    });
 }
